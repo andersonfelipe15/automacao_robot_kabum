@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-12T19:20:56.097896" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Compra Notebook" source="C:\Users\adm\Desktop\kabum_fluxo_compra\kabum_robot\tests\teste_compra_notebook.robot">
+<test id="s1-t1" name="Fluxo de Compra de Notebook na KaBuM" line="8">
+<kw name="Abrir Site KaBuM" owner="keywords">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-12T19:20:56.349769" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\adm\\Desktop\\kabum_fluxo_compra\\kabum_robot\\browser\\traces\\temp\\2ed531d9-ea85-44a8-b792-6f46bc18f426"}</msg>
+<msg time="2025-04-12T19:20:56.403082" level="INFO">Starting Browser process C:\Users\adm\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using port 55168</msg>
+<msg time="2025-04-12T19:20:56.403249" level="INFO">Node startup parameters: ['node', 'C:\\Users\\adm\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Browser\\wrapper\\index.js', '55168']</msg>
+<msg time="2025-04-12T19:20:58.269410" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\adm\\Desktop\\kabum_fluxo_compra\\kabum_robot\\browser\\traces\\temp\\2ed531d9-ea85-44a8-b792-6f46bc18f426"}</msg>
+<arg>chromium</arg>
+<arg>headless=${False}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-12T19:20:56.348651" elapsed="1.920990"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-12T19:21:04.013847" level="INFO">Successfully initialized new page object and opened url: https://www.kabum.com.br</msg>
+<msg time="2025-04-12T19:21:04.013955" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL_KABUM}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-12T19:20:58.269925" elapsed="5.744456"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<msg time="2025-04-12T19:21:04.020778" level="INFO">Set timeout to: 30000</msg>
+<arg>30s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-04-12T19:21:04.014659" elapsed="0.006331"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:20:56.347534" elapsed="7.673627"/>
+</kw>
+<kw name="Buscar Produto" owner="keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:04.158469" level="INFO">Waited for Element with selector id=input-busca at state visible</msg>
+<arg>id=input-busca</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:04.027404" elapsed="0.131297"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-12T19:21:04.159912" level="INFO">Fills the text 'notebook' in the given field.</msg>
+<arg>id=input-busca</arg>
+<arg>${termo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:04.158954" elapsed="0.048560"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>id=input-busca</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:04.207780" elapsed="0.884805"/>
+</kw>
+<arg>notebook</arg>
+<status status="PASS" start="2025-04-12T19:21:04.026744" elapsed="1.066068"/>
+</kw>
+<kw name="Selecionar Primeiro Produto" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:05.101077" level="INFO">Clicks the element 'text=Notebook Gamer Acer Nitro V15 Intel Core i5-13420H'.</msg>
+<arg>text=Notebook Gamer Acer Nitro V15 Intel Core i5-13420H</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:05.100343" elapsed="3.537616"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:09.499164" level="INFO">Waited for Element with selector [data-testid="ZipCodeInput"] at state visible</msg>
+<arg>[data-testid="ZipCodeInput"]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:08.638297" elapsed="0.861074"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:05.099659" elapsed="4.399906"/>
+</kw>
+<kw name="Preencher CEP E Validar Frete" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:09.504132" level="INFO">Clicks the element '[data-testid="ZipCodeInput"]'.</msg>
+<arg>[data-testid="ZipCodeInput"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:09.503041" elapsed="0.954919"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-12T19:21:10.459159" level="INFO">Fills the text '13180-160' in the given field.</msg>
+<arg>[data-testid="ZipCodeInput"]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:10.458229" elapsed="0.323101"/>
+</kw>
+<kw name="Press Keys" owner="Browser">
+<arg>[data-testid="ZipCodeInput"]</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given key combination into element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:10.781599" elapsed="0.243450"/>
+</kw>
+<arg>13180-160</arg>
+<status status="PASS" start="2025-04-12T19:21:09.502060" elapsed="1.523187"/>
+</kw>
+<kw name="Fechar Modal Frete" owner="keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:11.049907" level="INFO">Waited for Element with selector button.sc-bBXrwG.kBHzWh at state visible</msg>
+<arg>button.sc-bBXrwG.kBHzWh</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:11.026539" elapsed="0.023570"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:11.051243" level="INFO">Clicks the element 'button.sc-bBXrwG.kBHzWh'.</msg>
+<arg>button.sc-bBXrwG.kBHzWh</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:11.050342" elapsed="0.303902"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:11.025702" elapsed="0.328730"/>
+</kw>
+<kw name="Clicar Comprar" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:11.356190" level="INFO">Clicks the element '(//button[contains(., 'COMPRAR')])[1]'.</msg>
+<arg>(//button[contains(., 'COMPRAR')])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:11.355450" elapsed="0.281978"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:13.104541" level="INFO">Waited for Element with selector text=12 Meses de garantia at state visible</msg>
+<arg>text=12 Meses de garantia</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:11.637688" elapsed="1.467072"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:11.354833" elapsed="1.750316"/>
+</kw>
+<kw name="Selecionar Garantia Extra" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:13.107020" level="INFO">Clicks the element 'text=12 Meses de garantia'.</msg>
+<arg>text=12 Meses de garantia</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:13.106207" elapsed="0.747563"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:13.105543" elapsed="0.748409"/>
+</kw>
+<kw name="Ir Para Carrinho" owner="keywords">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T19:21:13.858052" level="INFO">Clicks the element 'text=Adicionar serviços'.</msg>
+<arg>text=Adicionar serviços</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T19:21:13.857324" elapsed="0.687378"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:16.338189" level="INFO">Waited for Element with selector id=navigation-address-v2 &gt;&gt; role=button[name="Ir para o pagamento"] at state visible</msg>
+<arg>id=navigation-address-v2 &gt;&gt; role=button[name="Ir para o pagamento"]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:14.545107" elapsed="1.793374"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:13.856654" elapsed="2.482058"/>
+</kw>
+<kw name="Validar Produto No Carrinho" owner="keywords">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-12T19:21:16.432624" level="INFO">Waited for Element with selector id=navigation-address-v2 &gt;&gt; role=button[name="Ir para o pagamento"] at state visible</msg>
+<arg>id=navigation-address-v2 &gt;&gt; role=button[name="Ir para o pagamento"]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-12T19:21:16.339826" elapsed="0.093012"/>
+</kw>
+<status status="PASS" start="2025-04-12T19:21:16.339151" elapsed="0.093845"/>
+</kw>
+<msg time="2025-04-12T19:21:16.465678" level="INFO">Switching context to context=08208db7-2823-4dfa-b72b-24aa4efa785f in CURRENT</msg>
+<msg time="2025-04-12T19:21:16.475110" level="INFO">Successfully changed active context: context=08208db7-2823-4dfa-b72b-24aa4efa785f</msg>
+<msg time="2025-04-12T19:21:16.576715" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-04-12T19:20:56.346469" elapsed="20.089541"/>
+</test>
+<status status="PASS" start="2025-04-12T19:20:56.100158" elapsed="20.484059"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teste Compra Notebook" id="s1" pass="1" fail="0" skip="0">Teste Compra Notebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
