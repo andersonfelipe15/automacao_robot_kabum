@@ -43,7 +43,7 @@ Valida que o produto foi corretamente adicionado ao carrinho
 🧪 Execução dos Testes
 Para executar os testes, utilize o comando abaixo:
 
-```bash
+
 robot tests/teste_compra_notebook.robot
 
 📁 Estrutura do Projeto
